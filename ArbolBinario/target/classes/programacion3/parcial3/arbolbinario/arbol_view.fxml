@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.canvas.Canvas?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="programacion3.parcial3.arbolbinario.ArbolController">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="txtDato" promptText="Ingrese un número" />
+            <Button text="Agregar" onAction="#agregar" />
+            <Button text="Eliminar" onAction="#eliminar" />
+            <Button text="Buscar" onAction="#buscar" />
+            <Button text="Limpiar" onAction="#limpiar" />
+        </HBox>
+    </top>
+    <center>
+        <Canvas fx:id="canvas" width="600" height="400" />
+    </center>
+    <bottom>
+        <VBox spacing="5">
+            <HBox spacing="10">
+                <Button text="Inorden" onAction="#mostrarInorden" />
+                <Button text="Preorden" onAction="#mostrarPreorden" />
+                <Button text="Postorden" onAction="#mostrarPostorden" />
+                <Button text="Altura" onAction="#mostrarAltura" />
+                <Button text="Contar hojas" onAction="#mostrarHojas" />
+            </HBox>
+            <TextArea fx:id="txtSalida" prefRowCount="3" editable="false" wrapText="true" />
+        </VBox>
+    </bottom>
+</BorderPane>
